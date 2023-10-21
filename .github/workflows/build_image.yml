@@ -11,3 +11,8 @@ jobs:
     steps:
       - name: Start
         run: echo "Build flask docker image"
+
+      - uses: docker-practice/actions-setup-docker@master
+
+      - name: Build image
+        run: docker build -t app:latest .
